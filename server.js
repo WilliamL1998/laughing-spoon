@@ -21,7 +21,7 @@ app.get("/notes", (req, res) => {
 })
 
 app.get("/api/notes", (req, res) => {
-    return res.sendFile(path.join(__dirname, "db/db.json"));
+    res.sendFile(path.join(__dirname, "db/db.json"));
 })
 
 app.post("/api/notes", (req, res) => {
@@ -49,6 +49,9 @@ app.post("/api/notes", (req, res) => {
         }
     })
 })
+
+
+
 
 
 app.listen(PORT, () => {
